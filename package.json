@@ -1,7 +1,7 @@
 {
   "name": "cas-tgt-checker",
-  "version": "1.0.0",
-  "description": "A Node module that checks the validity of CAS TGTs",
+  "version": "1.0.2",
+  "description": "A Node module that checks the validity of CAS Ticket Granting Tickets.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Testing is not available for this module.\""
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/strukt93/cas-tgt-checker/issues"
   },
-  "homepage": "https://github.com/strukt93/cas-tgt-checker#readme"
+  "homepage": "https://github.com/strukt93/cas-tgt-checker#readme",
+  "dependencies": {
+    "request": "^2.83.0"
+  }
 }
