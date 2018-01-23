@@ -14,4 +14,5 @@ function(valid){
 });
 ```
 
-If the above code was placed in a file called `index.js` and was run via `$ node index.js`, `true` will be printed in the console if the supplied ticket value was valid, given that the URL argument (CAS base endpoint) was correctly provided.
+
+If the above code was placed in a file called `index.js` and was run via `$ node index.js`, `true` will be printed in the console if the supplied ticket value was valid, given that the URL argument (CAS base endpoint) was correctly provided. `false` will be printed otherwise.
