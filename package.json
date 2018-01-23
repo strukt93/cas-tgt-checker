@@ -1,0 +1,19 @@
+{
+  "name": "cas-tgt-checker",
+  "version": "1.0.0",
+  "description": "A Node module that checks the validity of CAS TGTs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Testing is not available for this module.\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strukt93/cas-tgt-checker.git"
+  },
+  "author": "Mustafa Hasan <strukt93@gmail.com> (http://strukt.rocks)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/strukt93/cas-tgt-checker/issues"
+  },
+  "homepage": "https://github.com/strukt93/cas-tgt-checker#readme"
+}
