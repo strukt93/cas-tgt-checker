@@ -1,17 +1,18 @@
 const request = require('request');
 
 function validateParams(casURL, tgt, callback){
-    validateURL(casURL);
     if(typeof callback !== 'function' || !callback){
         var err = new Error("Invalid or no callback function supplied");
         console.log(err.stack);
         return false;
     }
+
     if(!tgt || tgt.length == 0){
         var err = new Error("No or empty TGT value supplied");
         console.log(err.stack);
         return false;
     }
+    return validateURL(casURL);
 }
 
 function validateURL(casURL, callback){
@@ -28,7 +29,6 @@ function validateURL(casURL, callback){
 
 exports.validateTGT = function(casURL, tgt, callback){
     validateParams(casURL, tgt, callback);
-    return;
     request(casURL + '/v1/tickets/' + tgt, (error, response, body) => {
         if(error){
             return callback(error);
