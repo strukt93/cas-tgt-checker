@@ -1,6 +1,6 @@
 {
   "name": "cas-tgt-checker",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Node module that checks the validity of CAS Ticket Granting Tickets.",
   "main": "index.js",
   "scripts": {

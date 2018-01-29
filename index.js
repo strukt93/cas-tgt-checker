@@ -23,7 +23,7 @@ function validateURL(casURL, callback){
     '(([0-9]{1,3}\.){3}[0-9]{1,3}))'+ // OR ip (v4) address
     '(\:[0-9]+)?(\/[-a-z[0-9]%_.~+]*)*');
     if(!pattern.test(casURL))
-        return callback(Error(message + examples));
+        return callback(false, Error(message + examples));
     return true;
 }
 
@@ -31,11 +31,11 @@ exports.validateTGT = function(casURL, tgt, callback){
     validateParams(casURL, tgt, callback);
     request(casURL + '/v1/tickets/' + tgt, (error, response, body) => {
         if(error){
-            return callback(error);
+            return callback(false, error);
         }
         switch(response.statusCode){
-            case 200: return callback(true);
-            default: return callback(false);
+            case 200: return callback(true, tgt);
+            default: return callback(false, "Error: Server returned a " + response.statusCode + " response with the following body:\n" + response.body);
         }
     });
 }
